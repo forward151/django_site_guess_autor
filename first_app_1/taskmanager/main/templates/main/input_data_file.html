@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    <h1>
+        Выберите файл с текстом, не забыв указать автора
+        <hr>
+    </h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.title }}<br>
+<!--        <p><input type="file" name="document"></p>-->
+        <p>{{ form.task_1 }}<br></p>
+        <button type="submit" class="btn btn-warning">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
+
+

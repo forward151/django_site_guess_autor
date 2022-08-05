@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    <h1>
+        <hr>
+    </h1>
+{% endblock %}
+
+{% block content %}
+{% if answer %}
+<div class="container">
+    <h1>
+        Тест завершен
+        <hr>
+        Результаты:
+    </h1>
+    <h3>Вероятно этот текст написал {{ answer }}</h3>
+</div>
+{% else %}
+<h1>
+    Данные успешно введены
+</h1>
+{% endif %}
+{% endblock %}

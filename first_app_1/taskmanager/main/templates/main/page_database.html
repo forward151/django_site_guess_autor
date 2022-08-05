@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    <h1>
+        База данных
+        <hr>
+    </h1>
+
+{% endblock %}
+
+
+{% block content %}
+    {% if tasks %}
+        {% for elem in tasks %}
+            <div class="container">
+                <h4>{{ elem.surname }}</h4>
+                <p>{{ elem.len_of_words }}</p>
+                <p>{{ elem.len_of_sentence }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="container">
+            <h2>
+                Здесь пока ничего нет
+            </h2>
+        </div>
+    {% endif %}
+{% endblock %}
